@@ -2,6 +2,12 @@
 
 
 ###
+GET {{host}}/clientes/desconto/Regular
+
+###
+GET {{host}}/clientes/-1
+
+###
 GET {{host}}/api/buscar/1
 
 

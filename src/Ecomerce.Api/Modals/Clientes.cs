@@ -1,0 +1,1 @@
+public record Cliente(string nome, int id);

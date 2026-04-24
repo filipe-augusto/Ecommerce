@@ -23,6 +23,7 @@ public static class ClientesEndPoints
 
         });
         grupo.MapDelete("/{id}", (int id) => "cliente deletado com sucesso");
+        grupo.MapGet("/desconto/{tipoCliente}",Desconto);
     }
 
     private static IResult GetTodos()
@@ -46,7 +47,16 @@ public static class ClientesEndPoints
         // Lógica para criar o cliente
         return TypedResults.Created($"/clientes/{cliente.id}", cliente);
     }
-
+    
+    private static IResult Desconto(string tipoCliente)
+    {
+        decimal desconto = tipoCliente switch
+        {
+            "Premium" => 0.20m,
+            "Regular" => 0.10m,
+            _ => 0.00m
+        };
+        return TypedResults.Ok(desconto);
+    }
 }
 
-public record Cliente(string nome, int id);

@@ -10,7 +10,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 //app.UseHttpsRedirection();
-
+app.MapProdutosEndpoints();
 app.MapClientesEndpoints();
 app.MapGet("/produtos", () => $"Recuperando o produto ");
 // app.MapPost("/produtos", (Produto produto) => "produto criado com sucesso");
@@ -28,4 +28,3 @@ app.Run();
 //dotnet add package Swashbuckle.AspNetCore
 //dotnet add package microsoft.AspNetCore.OpenApi
 
-public record Produto(int Id, string Nome, decimal Preco);

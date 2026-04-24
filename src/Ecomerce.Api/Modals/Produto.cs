@@ -1,0 +1,1 @@
+public record Produto(string nome, int id, decimal preco);
