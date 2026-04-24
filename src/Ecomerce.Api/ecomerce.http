@@ -1,0 +1,20 @@
+@host = http://localhost:5006
+
+
+###
+GET {{host}}/api/buscar/1
+
+
+###
+GET {{host}}/saudacao
+
+
+###
+POST {{host}}/produtos
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nome": "Notebook",
+    "preco": 2500.00
+}

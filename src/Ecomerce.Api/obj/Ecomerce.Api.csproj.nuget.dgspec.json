@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\source\\repos\\Ecomerce\\src\\Ecomerce.Api\\Ecomerce.Api.csproj": {}
+    "C:\\Users\\User_PC\\source\\repos\\Ecommerce\\src\\Ecomerce.Api\\Ecomerce.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\source\\repos\\Ecomerce\\src\\Ecomerce.Api\\Ecomerce.Api.csproj": {
+    "C:\\Users\\User_PC\\source\\repos\\Ecommerce\\src\\Ecomerce.Api\\Ecomerce.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\Ecomerce\\src\\Ecomerce.Api\\Ecomerce.Api.csproj",
+        "projectUniqueName": "C:\\Users\\User_PC\\source\\repos\\Ecommerce\\src\\Ecomerce.Api\\Ecomerce.Api.csproj",
         "projectName": "Ecomerce.Api",
-        "projectPath": "C:\\Users\\ADMIN\\source\\repos\\Ecomerce\\src\\Ecomerce.Api\\Ecomerce.Api.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\source\\repos\\Ecomerce\\src\\Ecomerce.Api\\obj\\",
+        "projectPath": "C:\\Users\\User_PC\\source\\repos\\Ecommerce\\src\\Ecomerce.Api\\Ecomerce.Api.csproj",
+        "packagesPath": "C:\\Users\\User_PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User_PC\\source\\repos\\Ecommerce\\src\\Ecomerce.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User_PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\ADMIN\\source\\repos\\Ecomerce\\src\\Ecomerce.Domain\\Ecomerce.Domain.csproj": {
-                "projectPath": "C:\\Users\\ADMIN\\source\\repos\\Ecomerce\\src\\Ecomerce.Domain\\Ecomerce.Domain.csproj"
+              "C:\\Users\\User_PC\\source\\repos\\Ecommerce\\src\\Ecomerce.Domain\\Ecomerce.Domain.csproj": {
+                "projectPath": "C:\\Users\\User_PC\\source\\repos\\Ecommerce\\src\\Ecomerce.Domain\\Ecomerce.Domain.csproj"
               }
             }
           }
@@ -53,6 +54,16 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[10.0.7, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[10.1.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -72,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
@@ -490,20 +501,20 @@
         }
       }
     },
-    "C:\\Users\\ADMIN\\source\\repos\\Ecomerce\\src\\Ecomerce.Domain\\Ecomerce.Domain.csproj": {
+    "C:\\Users\\User_PC\\source\\repos\\Ecommerce\\src\\Ecomerce.Domain\\Ecomerce.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\Ecomerce\\src\\Ecomerce.Domain\\Ecomerce.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\User_PC\\source\\repos\\Ecommerce\\src\\Ecomerce.Domain\\Ecomerce.Domain.csproj",
         "projectName": "Ecomerce.Domain",
-        "projectPath": "C:\\Users\\ADMIN\\source\\repos\\Ecomerce\\src\\Ecomerce.Domain\\Ecomerce.Domain.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\source\\repos\\Ecomerce\\src\\Ecomerce.Domain\\obj\\",
+        "projectPath": "C:\\Users\\User_PC\\source\\repos\\Ecommerce\\src\\Ecomerce.Domain\\Ecomerce.Domain.csproj",
+        "packagesPath": "C:\\Users\\User_PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User_PC\\source\\repos\\Ecommerce\\src\\Ecomerce.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User_PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -512,6 +523,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -551,7 +563,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
