@@ -1,0 +1,1 @@
+public record Usuario(int Id,string Nome, string Email, string Senha, string perfil);

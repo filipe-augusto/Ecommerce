@@ -1,4 +1,6 @@
 using System.Security.Cryptography.X509Certificates;
+using Coordenada = (int x, int y);
+using idCliente = int;
 
 public static class ClientesEndPoints
 {
@@ -24,6 +26,8 @@ public static class ClientesEndPoints
         });
         grupo.MapDelete("/{id}", (int id) => "cliente deletado com sucesso");
         grupo.MapGet("/desconto/{tipoCliente}",Desconto);
+        grupo.MapGet("/devolveIds",DevolveIds);
+        grupo.MapGet("/cordenada",ObterCoordenada);
     }
 
     private static IResult GetTodos()
@@ -34,7 +38,7 @@ public static class ClientesEndPoints
         new Cliente("Pedro", 3)
     });
     }
-    private static IResult GetPorId(int id)
+    private static IResult GetPorId(idCliente id)
     {
 
         if (id == 1)
@@ -47,7 +51,6 @@ public static class ClientesEndPoints
         // Lógica para criar o cliente
         return TypedResults.Created($"/clientes/{cliente.id}", cliente);
     }
-    
     private static IResult Desconto(string tipoCliente)
     {
         decimal desconto = tipoCliente switch
@@ -57,6 +60,19 @@ public static class ClientesEndPoints
             _ => 0.00m
         };
         return TypedResults.Ok(desconto);
+    }
+    private static IResult DevolveIds()
+    {
+        int[] ids1 = [ 1, 2, 3 ];
+        int [] ids2 = [ 4, 5, 6 ];
+        int[] todos = [..ids1, ..ids2];   
+
+        return TypedResults.Ok(todos);
+    }
+    
+    private static Coordenada ObterCoordenada()
+    {
+         return (x: 10, y: 20);
     }
 }
 

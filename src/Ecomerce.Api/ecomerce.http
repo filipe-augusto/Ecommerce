@@ -1,8 +1,17 @@
 @host = http://localhost:5006
 
 
+### 
+GET
+
 ###
-GET {{host}}/clientes/desconto/Regular
+GET {{host}}/clientes/cordenada
+
+###
+GET {{host}}/clientes/devolveIds
+
+###
+GET {{host}}/clientes/desconto/Premium
 
 ###
 GET {{host}}/clientes/-1
@@ -24,3 +33,19 @@ Content-Type: application/json
     "nome": "Notebook",
     "preco": 2500.00
 }
+
+###
+POST {{host}}/usuarios/login
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nome" : "Admin",
+    "email": "admin@mail.com",
+    "senha": "password",
+    "perfil": "admin"
+
+}
+
+
+

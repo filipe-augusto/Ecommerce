@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using System.Security.Cryptography.X509Certificates;
 
 public static class ProdutosEndPoints
@@ -5,12 +6,12 @@ public static class ProdutosEndPoints
     public static void MapProdutosEndpoints(this WebApplication app)
     {
         var grupo = app.MapGroup("/produtos")
-        //.RequireAuthorization()
+        .RequireAuthorization()
         //.AddEndpointFilter<LoggerFilterOptions>()
         .WithTags("Produtos");
 
         grupo.MapGet("/",  GetTodos);
-        grupo.MapPost("/",CriarProduto);
+        grupo.MapPost("/",CriarProduto).RequireAuthorization(policy => policy.RequireRole("admin"));
         grupo.MapGet("/{id}", GetPorId).AddEndpointFilter(async (invocationContext, next) =>
         {
             var id = invocationContext.GetArgument<int>(0);
@@ -41,10 +42,11 @@ public static class ProdutosEndPoints
 
         return TypedResults.NotFound();
     }
-    private static IResult CriarProduto(Produto produto)
+    private static IResult CriarProduto(Produto produto, ClaimsPrincipal user)
     {
         // Lógica para criar o produto
-        return TypedResults.Created($"/produtos/{produto.id}", produto);
+        return TypedResults.Created($"/produtos/{produto.id}", "produto criado com sucesso pelo usuário "
+         + user.FindFirst(ClaimTypes.Name)?.Value);
     }
 
 }
