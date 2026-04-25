@@ -3,13 +3,17 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using FluentValidation;
-
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddValidatorsFromAssemblyContaining<CriarCategoriaValidator>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<TokenService>();
-
+builder.Services.AddProblemDetails();
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddHealthChecks().AddDbContextCheck<AppDbContext>();
 builder.Services.AddAuthorization();
 builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer(options =>
@@ -31,12 +35,14 @@ builder.Services.AddAuthentication("Bearer")
 var app = builder.Build();
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseExceptionHandler();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 //app.UseHttpsRedirection();
+app.MapHealthChecks("/health");
 app.MapProdutosEndpoints();
 app.MapClientesEndpoints();
 app.MapUsuarioEndpoints();
@@ -44,7 +50,9 @@ app.MapCategoriasEndpoints();
 app.Run();
 //dotnet add package Swashbuckle.AspNetCore
 //dotnet add package microsoft.AspNetCore.OpenApi
-
+//dotnet add package Microsoft.EntityFrameWorkCore.SqlServer
+//dotnet add package Microsoft.EntityFrameWorkCore.Design
 //dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer 
 //dotnet add package FluentValidation
 //dotnet add package FluentValidation.DependencyInjectionExtensions
+//dotnet add package Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore

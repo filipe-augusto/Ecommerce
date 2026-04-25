@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ecomerce.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c80ec2310ab0ce15214a35f8056498bdc547ecd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fef91dc86f24215a501f43d0cc46ea0498bbdfd9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ecomerce.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ecomerce.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
