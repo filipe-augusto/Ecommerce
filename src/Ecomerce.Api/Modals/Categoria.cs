@@ -1,0 +1,1 @@
+public record Categoria(string nome, int id);

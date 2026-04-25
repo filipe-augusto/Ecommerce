@@ -26,6 +26,7 @@ GET {{host}}/saudacao
 
 ###
 POST {{host}}/produtos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwidW5pcXVlX25hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJuYmYiOjE3NzcwNzYzNjEsImV4cCI6MTc3NzA3OTk2MSwiaWF0IjoxNzc3MDc2MzYxLCJpc3MiOiJNaW5oYUFwaS5jb20uYnIiLCJhdWQiOiJNZXVzQ2xpZW50ZXMifQ.wFiiWgzmr8e7g4LAnrvt7rxQMcL1IsPwkyAEvAw1mE8
 Content-Type: application/json
 
 {
@@ -33,6 +34,10 @@ Content-Type: application/json
     "nome": "Notebook",
     "preco": 2500.00
 }
+
+###
+GET {{host}}/produtos/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwidW5pcXVlX25hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJuYmYiOjE3NzcwNzYzNjEsImV4cCI6MTc3NzA3OTk2MSwiaWF0IjoxNzc3MDc2MzYxLCJpc3MiOiJNaW5oYUFwaS5jb20uYnIiLCJhdWQiOiJNZXVzQ2xpZW50ZXMifQ.wFiiWgzmr8e7g4LAnrvt7rxQMcL1IsPwkyAEvAw1mE8
 
 ###
 POST {{host}}/usuarios/login
@@ -44,8 +49,27 @@ Content-Type: application/json
     "email": "admin@mail.com",
     "senha": "password",
     "perfil": "admin"
+}
+###
+POST {{host}}/produtos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwidW5pcXVlX25hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJuYmYiOjE3NzcwNzYzNjEsImV4cCI6MTc3NzA3OTk2MSwiaWF0IjoxNzc3MDc2MzYxLCJpc3MiOiJNaW5oYUFwaS5jb20uYnIiLCJhdWQiOiJNZXVzQ2xpZW50ZXMifQ.wFiiWgzmr8e7g4LAnrvt7rxQMcL1IsPwkyAEvAw1mE8
+Content-Type: application/json
 
+{
+    "id": 1,
+    "nome": "Notebook",
+    "preco": 2500.00
 }
 
+
+
+###
+POST {{host}}/categorias
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nome": ""
+}
 
 

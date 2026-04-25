@@ -56,10 +56,12 @@ TemporaryDependencyNodeTargetIdentifier=net10.0
 
 [sourceFiles]
 Endpoints/
+ CategoriasEndPoints.cs
  ClientesEndPoints.cs
  ProdutosEndPoints.cs
  UsuarioEndPoints.cs
 Modals/
+ Categoria.cs
  Clientes.cs
  Produto.cs
  Usuario.cs
@@ -69,6 +71,9 @@ obj/Debug/net10.0/
  Ecomerce.Api.GlobalUsings.g.cs
 Program.cs
 Services/TokenService.cs
+Validators/
+ CriarCategoriaValidator.cs
+ ValidationFilter.cs
 
 [metadataReferences]
 ../Ecomerce.Domain/obj/Debug/net10.0/ref/Ecomerce.Domain.dll
@@ -382,6 +387,8 @@ Services/TokenService.cs
  System.Xml.XPath.XDocument.dll
  WindowsBase.dll
 <NUGET>/
+ fluentvalidation.dependencyinjectionextensions/12.1.1/lib/net8.0/FluentValidation.DependencyInjectionExtensions.dll
+ fluentvalidation/12.1.1/lib/net8.0/FluentValidation.dll
  microsoft.aspnetcore.authentication.jwtbearer/10.0.7/lib/net10.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
  microsoft.aspnetcore.openapi/10.0.7/lib/net10.0/Microsoft.AspNetCore.OpenApi.dll
  microsoft.identitymodel.abstractions/8.0.1/lib/net9.0/Microsoft.IdentityModel.Abstractions.dll

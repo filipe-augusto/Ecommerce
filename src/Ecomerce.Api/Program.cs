@@ -2,10 +2,10 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
-
+using FluentValidation;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddValidatorsFromAssemblyContaining<CriarCategoriaValidator>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<TokenService>();
@@ -40,19 +40,11 @@ if (app.Environment.IsDevelopment())
 app.MapProdutosEndpoints();
 app.MapClientesEndpoints();
 app.MapUsuarioEndpoints();
-app.MapGet("/produtos", () => $"Recuperando o produto ");
-// app.MapPost("/produtos", (Produto produto) => "produto criado com sucesso");
-// app.MapPut("/produtos/{id}", (int id, Produto produto) => "produto atualizado com sucesso");
-// app.MapDelete("/produtos/{id}", (int id) => "produto deletado com sucesso");
-// app.MapGet("/saudacao", ()=>
-// {
-//     var dados = new {Mensagem = "olá", Data = DateTime.Now};
-//     return TypedResults.Ok(dados);
-// });
-
-
-
+app.MapCategoriasEndpoints();
 app.Run();
 //dotnet add package Swashbuckle.AspNetCore
 //dotnet add package microsoft.AspNetCore.OpenApi
 
+//dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer 
+//dotnet add package FluentValidation
+//dotnet add package FluentValidation.DependencyInjectionExtensions
